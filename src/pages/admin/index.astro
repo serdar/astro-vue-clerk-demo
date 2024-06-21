@@ -1,0 +1,10 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Signin from "./Signin.vue";
+---
+
+<Layout title="Admin">
+  <h2>Admin</h2>
+
+  <Signin client:only="vue" />
+</Layout>
