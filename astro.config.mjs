@@ -5,7 +5,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue({ jsx: true, appEntrypoint: '/src/vue-main' })],
+  integrations: [vue({ jsx: true, appEntrypoint: '/src/_app' })],
   output: 'server',
   adapter: cloudflare(),
 });

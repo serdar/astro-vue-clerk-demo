@@ -1,9 +1,6 @@
 <script setup>
 import { createApp } from 'vue';
 import { SignIn, clerkPlugin } from 'vue-clerk';
-import app from '../../vue-main';
-
-app.mount('#app');
 </script>
 
 <template>
