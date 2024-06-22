@@ -1,11 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+import { SignIn, SignedIn, SignedOut, UserButton } from 'vue-clerk';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<a href="/admin/">Sign in here</a>
+    	<SignedIn client:only="vue">
+            <UserButton client:visible />
+        </SignedIn>
+
+        <SignedOut client:only="vue">
+            <a href="/sign-in">Sign in here</a>
+        </SignedOut>
 	</main>
 </Layout>
 
